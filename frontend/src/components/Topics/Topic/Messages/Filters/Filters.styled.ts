@@ -104,7 +104,9 @@ export const InfoParagraph = styled.div`
 
 export const InfoModal = styled.div`
   height: auto;
-  width: 560px;
+  width: 600px;
+  max-height: 85vh;
+  overflow-y: auto;
   border-radius: 8px;
   background: ${({ theme }) => theme.modal.backgroundColor};
   position: absolute;
@@ -113,6 +115,25 @@ export const InfoModal = styled.div`
   box-shadow: ${({ theme }) => theme.modal.shadow};
   padding: 32px;
   z-index: 1;
+
+  code {
+    font-family: monospace;
+    font-size: 12px;
+    background: ${({ theme }) => theme.code.backgroundColor};
+    color: ${({ theme }) => theme.code.color};
+    padding: 1px 4px;
+    border-radius: 3px;
+    word-break: break-word;
+  }
+
+  a {
+    color: ${({ theme }) => theme.link.color};
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 `;
 
 export const QuestionIconContainer = styled.button`
